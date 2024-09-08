@@ -1,3 +1,7 @@
+import classes from './page.module.css';
 export default function MealDetailsPage(){
-  return <h1>Meal Details</h1>;
+  return <>
+ 
+  <main></main>
+  </>;
 }
