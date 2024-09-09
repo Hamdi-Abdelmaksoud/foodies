@@ -1,7 +1,7 @@
-import classes from './page.module.css';
-export default function MealDetailsPage(){
-  return <>
  
-  <main></main>
-  </>;
+export default function MealDetailsPage(){
+  return 
+ 
+  <main>hello</main>
+  ;
 }
