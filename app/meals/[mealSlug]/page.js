@@ -3,7 +3,8 @@ import classes from './page.module.css';
 import Image from 'next/image';
 export default function MealDetailsPage({params}){
 const meal=getMeal(params.mealSlug);
-  return (
+meal.instructions =meal.instructions.replace(/\n/g,'<br />');
+return (
   <>
   <header className={classes.header}>
     <div className={classes.image}>
