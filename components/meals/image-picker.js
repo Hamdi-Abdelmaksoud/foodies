@@ -12,6 +12,7 @@ const imageInput = useRef();
   function handleImageChange(event){
     const file=event.target.files[0];
     if(!file){
+      setPickedImage(null);
       return;
     }
     const filReader = new FileReader();
@@ -28,7 +29,7 @@ return <div className={classes.picker}>
       {!pickedImage && <p>No image picked yet.</p>}
     {pickedImage && <Image src={pickedImage} alt="The image selected by user." fill />}
     </div>
-    <input className={classes.input} type="file" id={name} ref={imageInput} onChange={handleImageChange} accept='image/png, image/jpeg' name={name}/>
+    <input className={classes.input} required type="file" id={name} ref={imageInput} onChange={handleImageChange} accept='image/png, image/jpeg' name={name}/>
   <button className={classes.button} type='button' onClick={handlePickClick}>Pick an Image</button>
    </div>
 </div>
